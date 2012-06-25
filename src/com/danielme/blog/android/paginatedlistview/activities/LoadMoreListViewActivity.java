@@ -54,11 +54,8 @@ public class LoadMoreListViewActivity extends AbstractListViewActivity
 
 			@Override
 			public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount)
-			{
-				boolean lastItem = (firstVisibleItem + visibleItemCount == totalItemCount);
-				boolean moreRows = getListAdapter().getCount() < datasource.getSize();
-
-				if (!loading && lastItem && moreRows)
+			{				
+				if (load(firstVisibleItem, visibleItemCount, totalItemCount))
 				{
 					loading = true;
 					footerView.findViewById(R.id.buttonLoadMore).setVisibility(View.VISIBLE);

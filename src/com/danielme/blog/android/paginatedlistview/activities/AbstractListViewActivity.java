@@ -94,4 +94,12 @@ public abstract class AbstractListViewActivity extends ListActivity
 	{
 		Toast.makeText(this, getListAdapter().getItem(position) + " " + getString(R.string.selected), Toast.LENGTH_SHORT).show();
 	}
+	
+	protected boolean load(int firstVisibleItem, int visibleItemCount, int totalItemCount)
+	{
+		boolean lastItem = firstVisibleItem + visibleItemCount == totalItemCount && getListView().getChildAt(visibleItemCount -1) != null && getListView().getChildAt(visibleItemCount-1).getBottom() <= getListView().getHeight();
+		boolean moreRows = getListAdapter().getCount() < datasource.getSize();
+		return moreRows && lastItem && !loading;
+		
+	}
 }
