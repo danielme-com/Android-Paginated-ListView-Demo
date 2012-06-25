@@ -58,6 +58,9 @@ public class Datasource
 		return SIZE;
 	}
 	
+	/**
+	 * Returns the elements in a <b>NEW</b> list.
+	 */
 	public List<String> getData(int offset, int limit)
 	{
 		List<String> newList = new ArrayList<String>(limit);
@@ -67,8 +70,7 @@ public class Datasource
 			end = data.size();
 		}
 		newList.addAll(data.subList(offset, end));
-		return newList;
-		
+		return newList;		
 	}
 
 }
