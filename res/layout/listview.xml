@@ -29,16 +29,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_android" 
+        android:contentDescription="@string/image"/>
 
-    <TextView
+    <TextView 
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/imageView1"
-        android:text="textView1"
+        android:text="@string/test"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -48,7 +49,7 @@
         android:layout_alignBottom="@+id/imageView1"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/imageView1"
-        android:text="textView2"
+        android:text="@string/test"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>

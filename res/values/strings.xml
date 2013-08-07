@@ -32,5 +32,9 @@
     <string name="previous">prev</string>
     <string name="next">next</string>
     <string name="last">last</string>
+    <string name="image">image</string>
+    <string name="test">test</string>
+    
+    
 
 </resources>
