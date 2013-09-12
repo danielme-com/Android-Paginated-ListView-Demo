@@ -41,7 +41,7 @@ public class LoadMoreListViewActivity extends AbstractListViewActivity
 
 		footerView = ((LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.footer_loadmore, null, false);
 		getListView().addFooterView(footerView, null, false);
-		setListAdapter(new CustomArrayAdapter(this, R.layout.listview, datasource.getData(0, PAGESIZE)));
+		setListAdapter(new CustomArrayAdapter(this, datasource.getData(0, PAGESIZE)));
 		getListView().removeFooterView(footerView);
 
 		getListView().setOnScrollListener(new OnScrollListener()

@@ -36,10 +36,12 @@ import android.widget.TextView;
  */
 public class CustomArrayAdapter extends ArrayAdapter<String>
 {
+	private LayoutInflater layoutInflater;
 
-	public CustomArrayAdapter(Context context, int textViewResourceId, List<String> objects)
+	public CustomArrayAdapter(Context context, List<String> objects)
 	{
-		super(context, textViewResourceId, objects);
+		super(context, 0, objects);
+		layoutInflater = LayoutInflater.from(context);
 	}
 
 	@Override
@@ -51,7 +53,6 @@ public class CustomArrayAdapter extends ArrayAdapter<String>
 		{
 			holder = new Holder();
 
-			LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = layoutInflater.inflate(R.layout.listview, null);
 			holder.setTextView1((TextView) convertView.findViewById(R.id.textView1));
 			holder.setTextView2((TextView) convertView.findViewById(R.id.textView2));

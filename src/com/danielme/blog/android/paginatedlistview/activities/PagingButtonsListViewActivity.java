@@ -66,7 +66,7 @@ public class PagingButtonsListViewActivity extends AbstractListViewActivity
 		last = (Button) findViewById(R.id.buttonlast);
 		datasource = Datasource.getInstance();
 
-		setListAdapter(new CustomArrayAdapter(this, R.layout.listview, new ArrayList<String>()));
+		setListAdapter(new CustomArrayAdapter(this, new ArrayList<String>()));
 
 		(new LoadNextPage()).execute();
 	}
